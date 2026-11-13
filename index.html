@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,33 +9,33 @@
 
 <body>
 
-    <header>
+    <header class="header">
         <h1>Subscription Tracker</h1>
     </header>
 
-    <main>
+    <main class="container">
 
-        <!-- Section 1: Subscription Form -->
-        <section id="form-section">
+        <!-- Section 1: Form -->
+        <section id="form-section" class="card">
 
-            <h2>Add Subscription</h2>
+            <h2 class="section-title">Add Subscription</h2>
 
-            <form id="subscription-form">
+            <form id="subscription-form" class="form-grid">
 
                 <label for="service">Service</label>
-                <input type="text" id="service" required>
+                <input type="text" id="service" class="input" required>
 
                 <label for="provider">Provider</label>
-                <input type="text" id="provider" required>
+                <input type="text" id="provider" class="input" required>
 
                 <label for="subscriber">Subscriber</label>
-                <input type="text" id="subscriber" required>
+                <input type="text" id="subscriber" class="input" required>
 
                 <label for="renewal-date">Renewal Date</label>
-                <input type="date" id="renewal-date" required>
+                <input type="date" id="renewal-date" class="input" required>
 
                 <label for="category">Category</label>
-                <select id="category" required>
+                <select id="category" class="input" required>
                     <option value="">Select Category</option>
                     <option value="Entertainment">Entertainment</option>
                     <option value="Education">Education</option>
@@ -44,50 +43,61 @@
                     <option value="Other">Other</option>
                 </select>
 
-                <button type="submit">Add Subscription</button>
+                <button type="submit" class="btn btn-primary">
+                    Add Subscription
+                </button>
 
             </form>
 
         </section>
 
-        <!-- Section 2: Subscription Table -->
-        <section id="table-section">
+        <!-- Section 2: Table -->
+        <section id="table-section" class="card">
 
-            <h2>Subscriptions</h2>
+            <h2 class="section-title">Subscriptions</h2>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Service</th>
-                        <th>Provider</th>
-                        <th>Subscriber</th>
-                        <th>Renewal Date</th>
-                        <th>Category</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+            <div class="table-responsive">
 
-                <tbody id="subscription-list">
-                </tbody>
-            </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Provider</th>
+                            <th>Subscriber</th>
+                            <th>Renewal Date</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="subscription-list">
+                    </tbody>
+
+                </table>
+
+            </div>
 
         </section>
 
         <!-- Section 3: Summary -->
-        <section id="summary-section">
+        <section id="summary-section" class="card">
 
-            <h2>Summary</h2>
+            <h2 class="section-title">Summary</h2>
 
-            <p>
-                Total Subscriptions:
-                <span id="total-subscriptions">0</span>
-            </p>
+            <div class="summary">
 
-            <p>
-                Expired Subscriptions:
-                <span id="expired-subscriptions">0</span>
-            </p>
+                <div class="summary-item">
+                    <p>Total Subscriptions</p>
+                    <h3 id="total-subscriptions">0</h3>
+                </div>
+
+                <div class="summary-item">
+                    <p>Expired Subscriptions</p>
+                    <h3 id="expired-subscriptions">0</h3>
+                </div>
+
+            </div>
 
         </section>
 
