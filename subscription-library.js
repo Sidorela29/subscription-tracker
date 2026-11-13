@@ -1,15 +1,13 @@
 const SubscriptionLibrary = {
 
     getAll() {
-        return JSON.parse(
-            localStorage.getItem("subscriptions")
-        ) || [];
+        return StorageLibrary.get("subscriptions");
     },
 
     save(subscriptions) {
-        localStorage.setItem(
+        StorageLibrary.save(
             "subscriptions",
-            JSON.stringify(subscriptions)
+            subscriptions
         );
     },
 
@@ -24,13 +22,7 @@ const SubscriptionLibrary = {
     },
 
     remove(id) {
-        const subscriptions = this.getAll();
-
-        const updated = subscriptions.filter(
-            subscription => subscription.id !== id
-        );
-
-        this.save(updated);
+        StorageLibrary.remove("subscriptions", id);
     },
 
     getStatus(renewalDate) {
@@ -49,7 +41,7 @@ const SubscriptionLibrary = {
     },
 
     getTotal() {
-        return this.getAll().length;
+        return StorageLibrary.count("subscriptions");
     },
 
     getExpired() {
