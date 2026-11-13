@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Subscription Tracker</h1>
+    </header>
+
+    <main>
+
+        <!-- Section 1: Subscription Form -->
+        <section id="form-section">
+
+            <h2>Add Subscription</h2>
+
+            <form id="subscription-form">
+
+                <label for="service">Service</label>
+                <input type="text" id="service" required>
+
+                <label for="provider">Provider</label>
+                <input type="text" id="provider" required>
+
+                <label for="subscriber">Subscriber</label>
+                <input type="text" id="subscriber" required>
+
+                <label for="renewal-date">Renewal Date</label>
+                <input type="date" id="renewal-date" required>
+
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Education">Education</option>
+                    <option value="Software">Software</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button type="submit">Add Subscription</button>
+
+            </form>
+
+        </section>
+
+        <!-- Section 2: Subscription Table -->
+        <section id="table-section">
+
+            <h2>Subscriptions</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>Subscriber</th>
+                        <th>Renewal Date</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="subscription-list">
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Section 3: Summary -->
+        <section id="summary-section">
+
+            <h2>Summary</h2>
+
+            <p>
+                Total Subscriptions:
+                <span id="total-subscriptions">0</span>
+            </p>
+
+            <p>
+                Expired Subscriptions:
+                <span id="expired-subscriptions">0</span>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
