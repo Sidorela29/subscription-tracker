@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Subscriptions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Subscription Tracker</h1>
+
+        <nav>
+            <a href="index.html" class="btn btn-primary">
+                Add Subscription
+            </a>
+
+            <a href="subscriptions.html" class="btn btn-primary">
+                View Subscriptions
+            </a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Subscription Table -->
+        <section id="table-section" class="card">
+
+            <h2 class="section-title">Subscriptions</h2>
+
+            <div class="table-responsive">
+
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Provider</th>
+                            <th>Subscriber</th>
+                            <th>Renewal Date</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="subscription-list">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Summary -->
+        <section id="summary-section" class="card">
+
+            <h2 class="section-title">Summary</h2>
+
+            <div class="summary">
+
+                <div class="summary-item">
+                    <p>Total Subscriptions</p>
+                    <h3 id="total-subscriptions">0</h3>
+                </div>
+
+                <div class="summary-item">
+                    <p>Expired Subscriptions</p>
+                    <h3 id="expired-subscriptions">0</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="subscription-library.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
