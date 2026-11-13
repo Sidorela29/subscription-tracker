@@ -157,4 +157,15 @@ body {
     .summary {
         flex-direction: column;
     }
+}/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
 }

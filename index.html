@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription Tracker</title>
+    <title>Add Subscription</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -11,11 +11,20 @@
 
     <header class="header">
         <h1>Subscription Tracker</h1>
+
+        <nav>
+            <a href="index.html" class="btn btn-primary">
+                Add Subscription
+            </a>
+
+            <a href="subscriptions.html" class="btn btn-primary">
+                View Subscriptions
+            </a>
+        </nav>
     </header>
 
     <main class="container">
 
-        <!-- Section 1: Form -->
         <section id="form-section" class="card">
 
             <h2 class="section-title">Add Subscription</h2>
@@ -35,6 +44,7 @@
                 <input type="date" id="renewal-date" class="input" required>
 
                 <label for="category">Category</label>
+
                 <select id="category" class="input" required>
                     <option value="">Select Category</option>
                     <option value="Entertainment">Entertainment</option>
@@ -51,58 +61,9 @@
 
         </section>
 
-        <!-- Section 2: Table -->
-        <section id="table-section" class="card">
-
-            <h2 class="section-title">Subscriptions</h2>
-
-            <div class="table-responsive">
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Service</th>
-                            <th>Provider</th>
-                            <th>Subscriber</th>
-                            <th>Renewal Date</th>
-                            <th>Category</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="subscription-list">
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </section>
-
-        <!-- Section 3: Summary -->
-        <section id="summary-section" class="card">
-
-            <h2 class="section-title">Summary</h2>
-
-            <div class="summary">
-
-                <div class="summary-item">
-                    <p>Total Subscriptions</p>
-                    <h3 id="total-subscriptions">0</h3>
-                </div>
-
-                <div class="summary-item">
-                    <p>Expired Subscriptions</p>
-                    <h3 id="expired-subscriptions">0</h3>
-                </div>
-
-            </div>
-
-        </section>
-
     </main>
 
+    <script src="subscription-library.js"></script>
     <script src="app.js"></script>
 
 </body>
